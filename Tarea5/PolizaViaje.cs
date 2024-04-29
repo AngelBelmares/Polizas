@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tarea5
+﻿namespace Tarea5
 {
     public class PolizaViaje : Poliza
     {
@@ -16,7 +10,8 @@ namespace Tarea5
             {"Ensenada", 2000.00m}
         };
 
-        public PolizaViaje(int numPoliza, DateTime fechaInicial, DateTime fechaFinal, string destino) : base(numPoliza, fechaInicial, fechaFinal)
+        public PolizaViaje(int numPoliza, DateTime fechaInicial, DateTime fechaFinal, string destino) :
+            base(numPoliza, fechaInicial, fechaFinal)
         {
             _destino = destino;
         }
