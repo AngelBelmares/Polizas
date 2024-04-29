@@ -37,7 +37,7 @@ namespace TestPolizas
                 fecha_final, destino);
 
             var duracion_viaje = polizaViaje.CalcularDuracionViaje();
-            Assert.AreNotEqual(duracion_viaje, 5345);
+            Assert.AreNotEqual(duracion_viaje, 5);
         }
 
         [TestMethod]
