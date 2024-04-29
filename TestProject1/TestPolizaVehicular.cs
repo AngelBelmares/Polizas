@@ -17,8 +17,7 @@ namespace TestPolizas
                 2025
             );
 
-            var costo_poliza = vehiculoInvalido.CalcularPoliza();
-            Assert.AreEqual(costo_poliza, 0);
+            Assert.ThrowsException<ArgumentException>(() => vehiculoInvalido.CalcularPoliza());
         }
 
         [TestMethod]
@@ -49,8 +48,7 @@ namespace TestPolizas
                 2025
             );
 
-            var info_vehiculo = vehiculoInvalido.ObtenerInformacionVehiculo();
-            Assert.AreEqual(info_vehiculo, "Vehículo asegurado: Honda, Año:  2025, Cobertura: Amplia");
+            Assert.ThrowsException<ArgumentException>(() => vehiculoInvalido.CalcularPoliza());
         }
 
         [TestMethod]

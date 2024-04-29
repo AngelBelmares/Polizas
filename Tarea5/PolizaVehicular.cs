@@ -73,8 +73,6 @@
             this.MarcaAuto = MarcaAuto;
             this.Anio = Anio;
             this.Cobertura = Cobertura;
-
-            this.Costo = CalcularPoliza();
         }
 
         public decimal CalcularPoliza()
