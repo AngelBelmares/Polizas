@@ -1,6 +1,6 @@
 ﻿namespace Tarea5
 {
-    class PolizaVehicular : Poliza
+    public class PolizaVehicular : Poliza
     {
         public enum MarcasAuto
         {
