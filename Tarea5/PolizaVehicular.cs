@@ -74,7 +74,7 @@
             this.Anio = Anio;
             this.Cobertura = Cobertura;
 
-            Costo = CalcularPoliza();
+            this.Costo = CalcularPoliza();
         }
 
         public decimal CalcularPoliza()
