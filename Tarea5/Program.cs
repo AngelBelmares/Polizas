@@ -14,7 +14,7 @@
             );
 
             Console.WriteLine(vehiculo1.CalcularPoliza());
-
+            Console.WriteLine(vehiculo1.ObtenerInformacionVehiculo());
         }
     }
 }

@@ -73,6 +73,8 @@
             this.MarcaAuto = MarcaAuto;
             this.Anio = Anio;
             this.Cobertura = Cobertura;
+
+            Costo = CalcularPoliza();
         }
 
         public decimal CalcularPoliza()
@@ -87,6 +89,11 @@
                 throw new ArgumentException("El tipo de cobertura especificado no tiene un costo asociado.");
 
             return (decimal)(costoAnio + costoMarca + costoCobertura);
+        }
+
+        public string ObtenerInformacionVehiculo()
+        {
+            return $"Vehículo asegurado: {MarcaAuto}, Año:  {Anio}, Cobertura: {Cobertura}";
         }
     }
 }
