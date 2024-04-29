@@ -1,6 +1,6 @@
 ﻿namespace Tarea5
 {
-    class PolizaInmobiliaria : Poliza
+    public class PolizaInmobiliaria : Poliza
     {
         public enum Ubicaciones
         {
@@ -36,7 +36,7 @@
 
         private Ubicaciones Ubicacion { get; set; }
         public decimal ValorInmueble { get; private set; }
-        private TipoCobertura Cobertura { get; set; }
+        public TipoCobertura Cobertura { get; private set; }
 
         public PolizaInmobiliaria(int num_poliza, DateTime fecha_inicial, DateTime fecha_final, Ubicaciones Ubicacion, decimal ValorInmueble, TipoCobertura Cobertura)
             : base(num_poliza, fecha_inicial, fecha_final)
@@ -49,6 +49,9 @@
 
         public decimal CalcularPoliza()
         {
+            if (ValorInmueble <= 0)
+                throw new ArgumentException("El valor del inmueble debe ser mayor a 0.");
+
             if (!costoPorUbicacion.TryGetValue(Ubicacion, out decimal costoUbicacion))
                 throw new ArgumentException("La ubicación especificada no tiene un costo asociado.");
 
@@ -57,6 +60,9 @@
 
         public decimal CalcularCobertura()
         {
+            if (ValorInmueble <= 0)
+                throw new ArgumentException("El valor del inmueble debe ser mayor a 0.");
+
             if (!coberturaPorcentaje.TryGetValue(Cobertura, out decimal porcentajeCobertura))
                 throw new ArgumentException("El tipo de cobertura especificado no tiene un porcentaje asociado.");
 
