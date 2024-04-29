@@ -88,5 +88,10 @@
 
             return (decimal)(costoAnio + costoMarca + costoCobertura);
         }
+
+        public string ObtenerInformacionVehiculo()
+        {
+            return $"Vehículo asegurado: {MarcaAuto}, Año:  {Anio}, Cobertura: {Cobertura}";
+        }
     }
 }
